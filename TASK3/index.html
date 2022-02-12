@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <style>
+        body 
+        {
+            margin: 0 auto;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .d1 
+        {
+            background-color: #32CD99;
+            color: white;
+            padding: 3px;
+            border-top: 3px solid green;
+            border-bottom: 3px solid green;
+        }
+        .d2 
+        {
+            width: 100%;
+            float: left;
+            margin-top: 50px;
+        }
+        .d21 
+        {
+            width: 49%;
+            float: left;
+            border-right: 4px solid #32CD99;
+        }
+        .d22 
+        {
+            width: 49%;
+            float: right;
+        }
+        table 
+        {
+            width: 50%;
+        }
+        table,tr,td 
+        {
+            border: 5px solid transparent;
+        }
+        tr td:nth-child(1)
+        {
+            width: 25%;
+        }
+
+        input[type='radio']:after 
+        {
+            width: 11px;
+            height: 11px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #d1d3d1;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid black;
+        }
+
+        input[type='radio']:checked:after 
+        {
+            width: 9px;
+            height: 9px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: white;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 3px solid #2196F3;
+        }
+
+        input[type='checkbox']
+        {
+            width: 15px;
+            height: 15px;
+        }
+
+        .submit
+        {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            border: 0px;
+            background-color: #2196F3;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reset
+        {
+            width: 100px;
+            height: 50px;
+            font-size: 24px;
+            border: 0px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submission td 
+        {
+            padding-top: 20px;
+        }
+
+        input[type='text'],input[type='email'],input[type='url']
+        {
+            outline: none;
+            border: 3px solid #d1d3d1;
+            border-radius: 5px;
+            height: 30px;
+            width: 220px;
+        }
+
+        .skill td 
+        {
+            padding-top: 20px;
+        }
+        .tab2,.tab2 th,.tab2 td,.tab2 tr
+        {
+            border: 2px solid rgb(118, 175, 31);
+            border-collapse: collapse;
+        }
+        thead
+        {
+            text-align: left;
+            background-color: rgb(131, 204, 20);
+            color: white;
+        }
+        #tab2,#th2,#tb2
+        {
+            text-align: left;
+        }
+        #th2 th
+        {
+            padding: 5px;
+        }
+        #tb2>tr td:nth-child(1)
+        {
+            width: 75%;
+        }
+        #tb2>tr td:nth-child(2)
+        {
+            width: 25%;
+        }
+        #tab2
+        {
+            margin: 0 auto;
+            width: 90%;
+            white-space: pre;
+            margin-bottom: 15px;
+        }
+        .tcenter
+        {
+            margin: 0 auto;
+        }
+        .hrline
+        {
+            display: none;
+        }
+        @media (max-width: 1000px)
+        {
+            .d21,.d22
+            {
+                width: 100%;
+            }
+            .tcenter
+            {
+                margin: 0 auto;
+            }
+            .hrline
+            {
+                display: block;
+                height: 3px;
+                outline: none;
+                background-color: #32CD99;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <center>
+            <h2>Student Enrollment Form</h2>
+        </center>
+    </div>
+    <div class="d2">
+        <div class="d21">
+            <form name="myform">
+                <table class="tcenter">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" id="name" /></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" id="email" /></td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><input type="url" id="web" /></td>
+                    </tr>
+                    <tr>
+                        <td>Image Link</td>
+                        <td><input type="url" id="image" /></td>
+                    </tr>
+                    <tr class="skill">
+                        <td style="vertical-align: top;">Gender</td>
+                        <td>
+                            <input type="radio" id="gen1" name="gender" value="male" />&nbsp;<label>Male</label>
+                            <br>
+                            <input type="radio" id="gen2" name="gender" value="female" />&nbsp;<label>Female</label>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr class="skill">
+                        <td>Skills</td>
+                        <td>
+                            <input class="skill" type="checkbox" id="java" value="Java" checked />&nbsp;<label>Java</label>
+                            <input class="skill" type="checkbox" id="html" value="HTML" />&nbsp;<label>HTML</label>
+                            <input class="skill" type="checkbox" id="css" value="CSS" />&nbsp;<label>CSS</label>
+                        </td>
+                    </tr>
+                    <tr class="submission">
+                        <td><input type="button" name="submit" class="submit" id="submit" value="Enroll Student" onclick="generate()" /></td>
+                        <td><input type="reset" name="reset" class="reset" value="Clear" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <hr class="hrline">
+        <div class="d22" id="d22">
+            <center><h1>Enrolled Students</h1></center>
+            <br><br>
+            <table class="tab2" id="tab2">
+                <thead id="th2">
+                    <th>Description</th>
+                    <th>Image</th>
+                </thead>
+                <tbody id="tb2">
+                    <tr style="text-align: center;" id="empty">
+                        <td colspan="2">No data available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    function generate()
+    {
+        var x = document.forms["myform"]["name"].value;
+        if (x == "") 
+        {
+            alert("Please enter your Name");
+            return false;
+        }
+        else 
+        {
+            generate_table();
+        }
+    }
+    function generate_table() 
+    {
+    document.getElementById("empty").style.display="none";
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var website = document.getElementById("web").value;
+    var image = document.getElementById("image").value;
+    var genders = document.getElementsByName("gender");
+    for(i=0;i<genders.length;i++)
+    {
+        if(genders[i].checked)
+        {
+            var gender = genders[i].value
+        }
+    }
+    var skills = [];
+    if(document.getElementById("java").checked)
+    {
+        skills.push(document.getElementById("java").value);
+    }
+    if(document.getElementById("html").checked)
+    {
+        skills.push(document.getElementById("html").value);
+    }
+    if(document.getElementById("css").checked)
+    {
+        skills.push(document.getElementById("css").value);
+    }
+    skills=skills.toString();
+    var body = document.getElementById("d22");
+    var tbl = document.getElementById("tab2");
+    var tblBody = document.getElementById("tb2");
+    var row = document.createElement("tr");
+    var cell1 = document.createElement("td");
+    var cell2 = document.createElement("td");
+    var bold = document.createElement("b");
+    var cellText1 = document.createTextNode(name);
+    var a = document.createElement("a");
+    var b = document.createElement("span");
+    var c = document.createTextNode("\n"+gender);
+    var d = document.createElement("span");
+    var e = document.createTextNode("\n"+email);
+    var f = document.createElement("span");
+    var g = document.createTextNode("\n"+skills);
+    var link =document.createTextNode("\n"+website);
+    var img = document.createElement("img");
+    img.src=image;
+    img.alt="images";
+    img.style.padding="10px";
+    img.style.width="150px";
+    img.style.height="130px";
+    a.appendChild(link);
+    a.title="Link";
+    a.href=website;
+    a.target="_blank";
+    bold.appendChild(cellText1);
+    cell1.appendChild(bold);
+    b.appendChild(c);
+    cell1.appendChild(b);
+    d.appendChild(e);
+    cell1.appendChild(d);
+    cell1.appendChild(a);
+    f.appendChild(g);
+    cell1.appendChild(f);
+    cell2.appendChild(img);
+    row.appendChild(cell1);
+    row.appendChild(cell2);
+    tblBody.appendChild(row);
+    tbl.appendChild(tblBody);
+    body.appendChild(tbl);
+    tbl.setAttribute("border", "2");
+    }
+</script>
+</html>

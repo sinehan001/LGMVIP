@@ -1,0 +1,121 @@
+.content {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 250%;
+    color: white;
+    font-weight: bold;
+}
+
+.userCard {
+    width: 20%;
+    margin-left: 7.5%;
+    margin-top: 5%;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    background-color: black;
+    float: left;
+    display: flexbox;
+    box-shadow: 0 16px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    justify-content: center;
+    min-height: 30vh;
+    align-self: center;
+    transition:  transform 0.2s;
+}
+
+.userCard:hover {
+    box-shadow:  0 16px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    transform: scale(1.2);
+}
+
+.imgUser {
+    width: 50%;
+    border-radius: 50%;
+    height: 150px;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+
+.userCard-body {
+    margin: 20px;
+    text-align: center;
+}
+
+.userCard-body h3 {
+    font-weight: 800;
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: 10%;
+}
+
+.userCard-body p {
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.userCard:hover > .userCard-body h3, .userCard:hover>.userCard-body p {
+    color: black;
+}
+
+@media (max-width: 1217px)
+{
+    .userCard {
+        width: 30%;
+    }
+    .container-mg:nth-child(2)>.userCard
+    {
+        margin-top: 3rem;
+    }
+}
+
+@media (min-width: 1217px)
+{
+    .container-mg:nth-child(2)>.userCard
+    {
+        margin-top: 3.5rem;
+    }
+    .container-mg:nth-child(4)>.userCard
+    {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 977px)
+{
+    .container-mg:nth-child(2)>.userCard
+    {
+        margin-top: 2.3rem;
+    }
+}
+
+@media (max-width: 670px)
+{
+    .userCard
+    {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .container-mg:nth-child(3)>.userCard
+    {
+        margin-top: 3%;
+    }
+}
+
+@media (min-width: 400px)
+{
+    .container-mg:nth-child(3)>.userCard
+    {
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .userCard {
+        width: 70%;
+        margin-left: 10%;
+    }
+}

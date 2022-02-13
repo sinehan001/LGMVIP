@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Calculator </title>
+<style>
+body
+{
+  background-color: #333333;
+  margin-top: 30px;
+}
+
+#clear{
+background-color: red;
+}
+
+.formstyle
+{
+width: 300px;
+height: 570px;
+margin: auto;
+border: 3px solid skyblue;
+border-radius: 35px;
+padding: 20px;
+background-color: black;
+box-shadow: 0 0 15px #9ecaed;
+}
+
+input
+{
+width: 70px;
+height: 70px;
+background-color: green;
+color: white;
+border: none;
+border-radius: 50%;
+font-size: 25px;
+}
+
+#calc{
+  width: 250px;
+	padding: 20px;
+	margin: auto;
+  outline: none;
+}
+
+input[type='text']
+{
+  border-radius: 15px;
+}
+
+</style>
+
+</head>
+<body>
+<div class= "formstyle">
+<form name = "form1">
+  <input id = "calc" type ="text" name = "answer"> <br> <br>
+  <input type = "button" value = "C" onclick = "form1.answer.value = ' ' " id= "clear" >
+  <input type="button" style="background-color: #1DD1C8;" value="+/-" onclick="plusminus(form1.answer.value)">
+  <input type="button" style="background-color: #1DD1C8;" value="%" onclick="form1.answer.value += '%'">
+  <input type="button" style="background-color: #1DD1C8;" value="√" onclick="form1.answer.value = Math.sqrt(form1.answer.value)">
+  <br><br>
+  <input type = "button" style="background-color: #EC9B21;" value = "1" onclick = "form1.answer.value += '1' ">
+  <input type = "button" style="background-color: #EC9B21;" value = "2" onclick = "form1.answer.value += '2' ">
+  <input type = "button" style="background-color: #EC9B21;" value = "3" onclick = "form1.answer.value += '3' ">
+  <input type="button" style="background-color: #1DD1C8;" value="*" onclick="form1.answer.value += '*' ">
+  <br> <br>
+  <input type = "button" style="background-color: #EC9B21;" value = "4" onclick = "form1.answer.value += '4' ">
+  <input type = "button" style="background-color: #EC9B21;" value = "5" onclick = "form1.answer.value += '5' ">
+  <input type = "button" style="background-color: #EC9B21;" value = "6" onclick = "form1.answer.value += '6' ">
+  <input type = "button" style="background-color: #1DD1C8;" value = "-" onclick = "form1.answer.value += '-' ">
+  <br> <br>
+  
+  <input type = "button" style="background-color: #EC9B21;" value = "7" onclick = "form1.answer.value += '7' ">
+  <input type = "button" style="background-color: #EC9B21;" value = "8" onclick = "form1.answer.value += '8' ">
+  <input type = "button" style="background-color: #EC9B21;" value = "9" onclick = "form1.answer.value += '9' ">
+  <input type = "button" style="background-color: #1DD1C8;" value = "+" onclick = "form1.answer.value += '+' ">
+  <br> <br>
+  
+  
+  <input type = "button" style="background-color: #1DD1C8;" value = "/" onclick = "form1.answer.value += '/' ">
+  <input type = "button" style="background-color: #EC9B21;" value = "0" onclick = "form1.answer.value += '0' ">
+    <input type = "button" style="background-color: #1DD1C8;" value = "." onclick = "form1.answer.value += '.' ">
+  <input type = "button" style="background-color: #1DD1C8;" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">
+  <br> 
+  <br> 
+  
+</form>
+</div>
+</body>
+<script type="text/javascript">
+  function plusminus(val)
+  {
+    let text = document.getElementById("calc").value;
+    if(text.includes("-"))
+    {
+      var rep = text.replace("-",'');
+      document.getElementById('calc').value=rep;
+    }
+    else
+    {
+      var result = '-'.concat(val);
+      document.getElementById("calc").value=result;
+    }
+
+  }
+</script>
+</html>
